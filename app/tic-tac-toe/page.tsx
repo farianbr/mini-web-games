@@ -1,15 +1,17 @@
-import React from "react";
-import Board from "./components/Board";
+'use client'
+import { useRouter } from 'next/navigation';
+import React from 'react';
 
-const TicTacToe = () => {
-  return (
-    <div className="h-full w-full">
-      <h1 className="sm:text-3xl text-lg font-bold text-gray-900 mt-4 text-center border-gray-950 border-b-2 w-1/4 mx-auto">
-      Tic-tac-toe
-      </h1>
-      <Board />
-    </div>
-  );
+const page = () => {
+    const router = useRouter()
+    return (
+        <div>
+            This is Tic Tac Toe
+            <button onClick={() => router.push('/tic-tac-toe/single-player')}>Single Player</button>
+            <button onClick={() => router.push('/tic-tac-toe/multi-player')}>MultiPlayer</button>
+            
+        </div>
+    );
 };
 
-export default TicTacToe;
+export default page;

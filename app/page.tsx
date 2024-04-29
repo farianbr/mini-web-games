@@ -12,11 +12,13 @@ export default function Home() {
           title="Tic Tac Toe"
           description={ticTacToeDescription}
           photo="/tic-tac-toe.png"
+          url="/tic-tac-toe"
         />
         <GameCard
           description={wordleDescription}
           title="Wordle"
           photo="/tic-tac-toe.png"
+          url="/wordle"
         />
         {/* <GameCard /> */}
       </div>

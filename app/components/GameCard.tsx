@@ -7,9 +7,10 @@ interface CardProps {
   title: string;
   photo: string;
   description: string;
+  url: string
 }
 
-const GameCard: React.FC<CardProps> = ({ title, photo, description }) => {
+const GameCard: React.FC<CardProps> = ({ title, photo, description, url }) => {
   const router = useRouter()
 
   return (
@@ -22,7 +23,7 @@ const GameCard: React.FC<CardProps> = ({ title, photo, description }) => {
           <h2 className="card-title">{title}</h2>
           <p className="text-sm">{description}</p>
           <div className="card-actions">
-            <button onClick={() => router.push('/tic-tac-toe')} className="btn btn-primary btn-sm mt-5">Play Now</button>
+            <button onClick={() => router.push(url)} className="btn btn-primary btn-sm mt-5">Play Now</button>
           </div>
         </div>
       </div>

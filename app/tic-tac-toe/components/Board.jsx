@@ -19,7 +19,7 @@ const Board = () => {
       [1, 4, 7],
       [2, 5, 8],
       [0, 4, 8],
-      [2, 4, 8],
+      [2, 4, 6],
     ];
 
     for (let state of winningStates) {
@@ -98,7 +98,7 @@ const Board = () => {
       >
         Reset
       </button>
-      <button onClick={() => router.push('/')} className="btn">Go back</button>
+      <button onClick={() => router.push('/tic-tac-toe')} className="btn">Go back</button>
       </div>
     </div>
   );
